@@ -19,10 +19,13 @@ gcloud beta dataproc clusters create \
    --num-workers=2 \
    --scopes=cloud-platform \
    --worker-machine-type=n1-standard-4 \
+   --worker-boot-disk-size=500GB \
    --master-machine-type=n1-standard-4 \
+   --master-boot-disk-size=500GB \
    --image-version=1.4 \
    --enable-component-gateway \
    --optional-components=ANACONDA,JUPYTER \
+   --region=us-west2
    --zone=$ZONE \
    --initialization-actions=$INSTALL \
    ch6cluster
