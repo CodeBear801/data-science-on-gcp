@@ -119,7 +119,8 @@ def run(project, bucket, dataset):
       '--setup_file=./setup.py',
       '--max_num_workers=8',
       '--autoscaling_algorithm=THROUGHPUT_BASED',
-      '--runner=DataflowRunner'
+      '--runner=DataflowRunner',
+      '--region=us-west2'
    ]
    airports_filename = 'gs://{}/flights/airports/airports.csv.gz'.format(bucket)
    flights_raw_files = 'gs://{}/flights/raw/*.csv'.format(bucket)
